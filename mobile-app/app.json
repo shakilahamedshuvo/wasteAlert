@@ -1,0 +1,52 @@
+﻿{
+  "expo": {
+    "name": "WasteAlert",
+    "slug": "wastealert-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "wastealert",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wastealert.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Allow WasteAlert to use your location to report waste issues.",
+        "NSPhotoLibraryUsageDescription": "Allow WasteAlert to access your photos to upload waste images.",
+        "NSCameraUsageDescription": "Allow WasteAlert to access your camera to take photos of waste issues."
+      }
+    },
+    "android": {
+      "package": "com.wastealert.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ],
+      "usesCleartextTraffic": true
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow WasteAlert to use your location to submit complaints."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow WasteAlert to access your photos to upload waste images.",
+          "cameraPermission": "Allow WasteAlert to access your camera to take photos of waste issues."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
